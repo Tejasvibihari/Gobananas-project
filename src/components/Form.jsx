@@ -35,7 +35,7 @@ export default function Form() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         try {
-            const cords = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city},${state}&limit=1&appid=d6aba077a0d63d6c988afd1c347f6ac5`)
+            const cords = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city},${state}&limit=1&appid=d6aba077a0d63d6c988afd1c347f6ac5`)
             setLatitude(cords.data[0].lat);
             setLongitude(cords.data[0].lon);
         } catch (error) {
